@@ -27,22 +27,33 @@ namespace Students
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "результатыDataSet.Результаты". При необходимости она может быть перемещена или удалена.
             this.результатыTableAdapter.Fill(this.результатыDataSet.Результаты);
-
-
         }
         private void button1_Click(object sender, EventArgs e)
         {
             int kod = Convert.ToInt32(textBox1.Text);
-            string query = "DELETE FROM List Where [Номер]=" + kod;
+            string query = "DELETE FROM Результаты Where [Код]=" + kod;
             OleDbCommand command = new OleDbCommand(query, myConnect);
             command.ExecuteNonQuery();
-           
+            this.результатыTableAdapter.Fill(this.результатыDataSet.Результаты);
+            MessageBox.Show("Данные удалены");
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Form2 f = new Form2();
             f.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.результатыTableAdapter.Fill(this.результатыDataSet.Результаты);
+        }
+
+        private void фамилияУченикаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3();
+            f3.Show();
         }
     }
 }
