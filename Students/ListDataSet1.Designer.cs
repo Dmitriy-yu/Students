@@ -20,9 +20,9 @@ namespace Students {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("ListDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("ListDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class ListDataSet : global::System.Data.DataSet {
+    public partial class ListDataSet1 : global::System.Data.DataSet {
         
         private ListDataTable tableList;
         
@@ -30,7 +30,7 @@ namespace Students {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public ListDataSet() {
+        public ListDataSet1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Students {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected ListDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected ListDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace Students {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            ListDataSet cln = ((ListDataSet)(base.Clone()));
+            ListDataSet1 cln = ((ListDataSet1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace Students {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "ListDataSet";
+            this.DataSetName = "ListDataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/ListDataSet.xsd";
+            this.Namespace = "http://tempuri.org/ListDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableList = new ListDataTable();
@@ -225,7 +225,7 @@ namespace Students {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            ListDataSet ds = new ListDataSet();
+            ListDataSet1 ds = new ListDataSet1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -287,7 +287,7 @@ namespace Students {
             
             private global::System.Data.DataColumn columnKласс;
             
-            private global::System.Data.DataColumn columnОценка_за_год;
+            private global::System.Data.DataColumn columnОценка_за__год;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -356,9 +356,9 @@ namespace Students {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Оценка_за_годColumn {
+            public global::System.Data.DataColumn Оценка_за__годColumn {
                 get {
-                    return this.columnОценка_за_год;
+                    return this.columnОценка_за__год;
                 }
             }
             
@@ -399,14 +399,14 @@ namespace Students {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ListRow AddListRow(int Номер, string Имя, string Фамилия, int Kласс, int Оценка_за_год) {
+            public ListRow AddListRow(int Номер, string Имя, string Фамилия, int Kласс, int Оценка_за__год) {
                 ListRow rowListRow = ((ListRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Номер,
                         Имя,
                         Фамилия,
                         Kласс,
-                        Оценка_за_год};
+                        Оценка_за__год};
                 rowListRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowListRow);
                 return rowListRow;
@@ -440,7 +440,7 @@ namespace Students {
                 this.columnИмя = base.Columns["Имя"];
                 this.columnФамилия = base.Columns["Фамилия"];
                 this.columnKласс = base.Columns["Kласс"];
-                this.columnОценка_за_год = base.Columns["Оценка за год"];
+                this.columnОценка_за__год = base.Columns["Оценка_за_ год"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -454,8 +454,8 @@ namespace Students {
                 base.Columns.Add(this.columnФамилия);
                 this.columnKласс = new global::System.Data.DataColumn("Kласс", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnKласс);
-                this.columnОценка_за_год = new global::System.Data.DataColumn("Оценка за год", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnОценка_за_год);
+                this.columnОценка_за__год = new global::System.Data.DataColumn("Оценка_за_ год", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnОценка_за__год);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnНомер}, true));
                 this.columnНомер.AllowDBNull = false;
@@ -529,7 +529,7 @@ namespace Students {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ListDataSet ds = new ListDataSet();
+                ListDataSet1 ds = new ListDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -663,17 +663,17 @@ namespace Students {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Оценка_за_год {
+            public int Оценка_за__год {
                 get {
                     try {
-                        return ((int)(this[this.tableList.Оценка_за_годColumn]));
+                        return ((int)(this[this.tableList.Оценка_за__годColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Оценка за год\' в таблице \'List\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Оценка_за_ год\' в таблице \'List\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableList.Оценка_за_годColumn] = value;
+                    this[this.tableList.Оценка_за__годColumn] = value;
                 }
             }
             
@@ -715,14 +715,14 @@ namespace Students {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsОценка_за_годNull() {
-                return this.IsNull(this.tableList.Оценка_за_годColumn);
+            public bool IsОценка_за__годNull() {
+                return this.IsNull(this.tableList.Оценка_за__годColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetОценка_за_годNull() {
-                this[this.tableList.Оценка_за_годColumn] = global::System.Convert.DBNull;
+            public void SetОценка_за__годNull() {
+                this[this.tableList.Оценка_за__годColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -761,7 +761,7 @@ namespace Students {
         }
     }
 }
-namespace Students.ListDataSetTableAdapters {
+namespace Students.ListDataSet1TableAdapters {
     
     
     /// <summary>
@@ -889,47 +889,47 @@ namespace Students.ListDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Имя", "Имя");
             tableMapping.ColumnMappings.Add("Фамилия", "Фамилия");
             tableMapping.ColumnMappings.Add("Kласс", "Kласс");
-            tableMapping.ColumnMappings.Add("Оценка за год", "Оценка за год");
+            tableMapping.ColumnMappings.Add("Оценка_за_ год", "Оценка_за_ год");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = "DELETE FROM `List` WHERE ((`Номер` = ?) AND ((? = 1 AND `Имя` IS NULL) OR (`Имя` " +
                 "= ?)) AND ((? = 1 AND `Kласс` IS NULL) OR (`Kласс` = ?)) AND ((? = 1 AND `Оценка" +
-                " за год` IS NULL) OR (`Оценка за год` = ?)))";
+                "_за_ год` IS NULL) OR (`Оценка_за_ год` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Номер", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Имя", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Имя", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Имя", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Имя", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Kласс", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Kласс", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Kласс", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Kласс", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Оценка_за_год", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Оценка за год", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Оценка_за_год", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Оценка за год", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Оценка_за__год", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Оценка_за_ год", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Оценка_за__год", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Оценка_за_ год", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `List` (`Номер`, `Имя`, `Фамилия`, `Kласс`, `Оценка за год`) VALUES (" +
-                "?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `List` (`Номер`, `Имя`, `Фамилия`, `Kласс`, `Оценка_за_ год`) VALUES " +
+                "(?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Номер", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Имя", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Имя", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Фамилия", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Фамилия", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Kласс", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Kласс", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Оценка_за_год", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Оценка за год", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Оценка_за__год", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Оценка_за_ год", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `List` SET `Номер` = ?, `Имя` = ?, `Фамилия` = ?, `Kласс` = ?, `Оценка за год` = ? WHERE ((`Номер` = ?) AND ((? = 1 AND `Имя` IS NULL) OR (`Имя` = ?)) AND ((? = 1 AND `Kласс` IS NULL) OR (`Kласс` = ?)) AND ((? = 1 AND `Оценка за год` IS NULL) OR (`Оценка за год` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `List` SET `Номер` = ?, `Имя` = ?, `Фамилия` = ?, `Kласс` = ?, `Оценка_за_ год` = ? WHERE ((`Номер` = ?) AND ((? = 1 AND `Имя` IS NULL) OR (`Имя` = ?)) AND ((? = 1 AND `Kласс` IS NULL) OR (`Kласс` = ?)) AND ((? = 1 AND `Оценка_за_ год` IS NULL) OR (`Оценка_за_ год` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Номер", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Имя", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Имя", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Фамилия", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Фамилия", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Kласс", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Kласс", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Оценка_за_год", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Оценка за год", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Оценка_за__год", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Оценка_за_ год", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Номер", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Имя", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Имя", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Имя", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Имя", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Kласс", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Kласс", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Kласс", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Kласс", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Оценка_за_год", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Оценка за год", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Оценка_за_год", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Оценка за год", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Оценка_за__год", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Оценка_за_ год", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Оценка_за__год", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Оценка_за_ год", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -945,7 +945,7 @@ namespace Students.ListDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Номер, Имя, Фамилия, Kласс, [Оценка за год] FROM List";
+            this._commandCollection[0].CommandText = "SELECT Номер, Имя, Фамилия, Kласс, [Оценка_за_ год] FROM List";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -953,7 +953,7 @@ namespace Students.ListDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ListDataSet.ListDataTable dataTable) {
+        public virtual int Fill(ListDataSet1.ListDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -966,9 +966,9 @@ namespace Students.ListDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ListDataSet.ListDataTable GetData() {
+        public virtual ListDataSet1.ListDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ListDataSet.ListDataTable dataTable = new ListDataSet.ListDataTable();
+            ListDataSet1.ListDataTable dataTable = new ListDataSet1.ListDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -976,14 +976,14 @@ namespace Students.ListDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ListDataSet.ListDataTable dataTable) {
+        public virtual int Update(ListDataSet1.ListDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ListDataSet dataSet) {
+        public virtual int Update(ListDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "List");
         }
         
@@ -1006,7 +1006,7 @@ namespace Students.ListDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(global::System.Nullable<int> Original_Номер, string Original_Имя, global::System.Nullable<int> Original_Kласс, global::System.Nullable<int> Original_Оценка_за_год) {
+        public virtual int Delete(global::System.Nullable<int> Original_Номер, string Original_Имя, global::System.Nullable<int> Original_Kласс, global::System.Nullable<int> Original_Оценка_за__год) {
             if ((Original_Номер.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Номер.Value));
             }
@@ -1029,9 +1029,9 @@ namespace Students.ListDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Original_Оценка_за_год.HasValue == true)) {
+            if ((Original_Оценка_за__год.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_Оценка_за_год.Value));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_Оценка_за__год.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
@@ -1057,7 +1057,7 @@ namespace Students.ListDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> Номер, string Имя, string Фамилия, global::System.Nullable<int> Kласс, global::System.Nullable<int> Оценка_за_год) {
+        public virtual int Insert(global::System.Nullable<int> Номер, string Имя, string Фамилия, global::System.Nullable<int> Kласс, global::System.Nullable<int> Оценка_за__год) {
             if ((Номер.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Номер.Value));
             }
@@ -1082,8 +1082,8 @@ namespace Students.ListDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((Оценка_за_год.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(Оценка_за_год.Value));
+            if ((Оценка_за__год.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(Оценка_за__год.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
@@ -1108,7 +1108,7 @@ namespace Students.ListDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> Номер, string Имя, string Фамилия, global::System.Nullable<int> Kласс, global::System.Nullable<int> Оценка_за_год, global::System.Nullable<int> Original_Номер, string Original_Имя, global::System.Nullable<int> Original_Kласс, global::System.Nullable<int> Original_Оценка_за_год) {
+        public virtual int Update(global::System.Nullable<int> Номер, string Имя, string Фамилия, global::System.Nullable<int> Kласс, global::System.Nullable<int> Оценка_за__год, global::System.Nullable<int> Original_Номер, string Original_Имя, global::System.Nullable<int> Original_Kласс, global::System.Nullable<int> Original_Оценка_за__год) {
             if ((Номер.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Номер.Value));
             }
@@ -1133,8 +1133,8 @@ namespace Students.ListDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((Оценка_за_год.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Оценка_за_год.Value));
+            if ((Оценка_за__год.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Оценка_за__год.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
@@ -1161,9 +1161,9 @@ namespace Students.ListDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((Original_Оценка_за_год.HasValue == true)) {
+            if ((Original_Оценка_за__год.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_Оценка_за_год.Value));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_Оценка_за__год.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
@@ -1189,8 +1189,8 @@ namespace Students.ListDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Имя, string Фамилия, global::System.Nullable<int> Kласс, global::System.Nullable<int> Оценка_за_год, global::System.Nullable<int> Original_Номер, string Original_Имя, global::System.Nullable<int> Original_Kласс, global::System.Nullable<int> Original_Оценка_за_год) {
-            return this.Update(Original_Номер, Имя, Фамилия, Kласс, Оценка_за_год, Original_Номер, Original_Имя, Original_Kласс, Original_Оценка_за_год);
+        public virtual int Update(string Имя, string Фамилия, global::System.Nullable<int> Kласс, global::System.Nullable<int> Оценка_за__год, global::System.Nullable<int> Original_Номер, string Original_Имя, global::System.Nullable<int> Original_Kласс, global::System.Nullable<int> Original_Оценка_за__год) {
+            return this.Update(Original_Номер, Имя, Фамилия, Kласс, Оценка_за__год, Original_Номер, Original_Имя, Original_Kласс, Original_Оценка_за__год);
         }
     }
     
@@ -1285,7 +1285,7 @@ namespace Students.ListDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(ListDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(ListDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._listTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.List.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1304,7 +1304,7 @@ namespace Students.ListDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(ListDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(ListDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._listTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.List.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1322,7 +1322,7 @@ namespace Students.ListDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(ListDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(ListDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._listTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.List.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1364,7 +1364,7 @@ namespace Students.ListDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(ListDataSet dataSet) {
+        public virtual int UpdateAll(ListDataSet1 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

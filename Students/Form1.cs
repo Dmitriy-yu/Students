@@ -13,7 +13,7 @@ namespace Students
 {
     public partial class Form1 : Form
     {
-        private static string connectionString ="Provider = Microsoft.Jet.OLEDB.4.0; Data Source = List.mdb";
+        private static string connectionString = " Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Результаты.accdb";
         private OleDbConnection myConnect;
         public Form1()
         {
@@ -25,8 +25,9 @@ namespace Students
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "listDataSet.List". При необходимости она может быть перемещена или удалена.
-            this.listTableAdapter.Fill(this.listDataSet.List);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "результатыDataSet.Результаты". При необходимости она может быть перемещена или удалена.
+            this.результатыTableAdapter.Fill(this.результатыDataSet.Результаты);
+
 
         }
         private void button1_Click(object sender, EventArgs e)
@@ -35,7 +36,7 @@ namespace Students
             string query = "DELETE FROM List Where [Номер]=" + kod;
             OleDbCommand command = new OleDbCommand(query, myConnect);
             command.ExecuteNonQuery();
-            this.listTableAdapter.Fill(this.listDataSet.List);
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
