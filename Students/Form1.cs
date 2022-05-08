@@ -22,7 +22,6 @@ namespace Students
             myConnect.Open();    
 
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "результатыDataSet.Результаты". При необходимости она может быть перемещена или удалена.
@@ -55,5 +54,11 @@ namespace Students
             Form3 f3 = new Form3();
             f3.Show();
         }
+
+        private void Form1_Activated(object sender, EventArgs e)
+        {
+            this.результатыTableAdapter.Fill(this.результатыDataSet.Результаты);
+        }
     }
+    
 }
